@@ -1,0 +1,33 @@
+python software + zkt package + cx_Oracle + sms requests package install on linux
+==================================================================================
+Oracle Connectivity through linux with python  ------https://yum.oracle.com/oracle-linux-python.html
+
+
+Installing cx_Oracle for Python 3
+To install cx_Oracle for Python 3 on Oracle Linux 7:
+
+$ sudo yum -y install oraclelinux-developer-release-el7
+$ sudo yum -y install oracle-instantclient-release-el7
+$ sudo yum -y install python36-cx_Oracle
+
+
+To install cx_Oracle for Python 3 on Oracle Linux 8:
+
+$ sudo yum -y install oraclelinux-developer-release-el8
+$ sudo dnf -y install oracle-instantclient-release-el8
+$ sudo dnf -y install python36-cx_Oracle
+
+cd /bin/
+pip install -U pyzk
+or
+pip3 install -U pyzk
+pip3 install requests
+
+
+RUN Python IN BACKGROUND:
+==========================
+nohup python3 -u BexpetroSMS.py </dev/null &>/dev/null &
+
+CHECK WHICH PYTHON SERVICES ARE RUNNING IN BACKGROUND:
+======================================================
+ps aux | grep python
