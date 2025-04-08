@@ -6,7 +6,7 @@ import base64
   
 url = "https://gpcmp.grameenphone.com/gpcmpapi/messageplatform/controller.home?username=BeximcoLPG1&password=Admin123@&apicode=1&msisdn=#&countrycode=880&cli=~~&messagetype=1&message=***&messageid=0"
 
-con = cx_Oracle.connect('lpg_test/lpg123456@192.168.188.28/devdb')
+con = cx_Oracle.connect('u/p@ip/sid')
 cur_oracle = con.cursor()
 
 while True:
@@ -43,7 +43,7 @@ while True:
 				print("Something went wrong")
 	except Exception as e:
 		try:
-			con = cx_Oracle.connect('lpg_test/lpg123456@192.168.188.28/devdb')
+			con = cx_Oracle.connect('u/p@ip/sid')
 			cur_oracle = con.cursor()		
 		except Exception as e:
 			pass
