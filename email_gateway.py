@@ -8,7 +8,7 @@ from datetime import datetime
 import cx_Oracle
 import smtplib
 
-con = cx_Oracle.connect('ideahameem/tejga@175.29.177.85/orclpdb.localdomain')
+con = cx_Oracle.connect('u/p@ip/sid')
 
 
 cur = con.cursor()
@@ -16,7 +16,7 @@ cur3 = con.cursor()
 cur1 = con.cursor()
 cur2 = con.cursor()
 
-smtpserver = {"hameemgroup.com":"erp_tz@hameemgroup.com eR1!4Fa nishat.hameemgroup.com 587 starttls"}
+smtpserver = {"hameemgroup.com":"erp_tz@hameemgroup.com pass nishat.hameemgroup.com 587 starttls"}
 
 def send_email():
 	while True:
