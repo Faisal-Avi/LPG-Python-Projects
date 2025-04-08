@@ -6,7 +6,7 @@ import qrcode
 from io import BytesIO
 from pypdf import PdfReader, PdfWriter
 
-con = cx_Oracle.connect('lpg_bkp/lpg123456@192.168.188.32/dbtest')
+con = cx_Oracle.connect('u/p@ip/sid')
 cur_oracle = con.cursor()
 
 while True:
@@ -43,7 +43,7 @@ while True:
 				print(e)
 	except Exception as e:
 		try:
-			con = cx_Oracle.connect('lpg_bkp/lpg123456@192.168.188.32/dbtest')
+			con = cx_Oracle.connect('u/p@ip/sid')
 			cur_oracle = con.cursor()		
 		except Exception as e:
 			pass
