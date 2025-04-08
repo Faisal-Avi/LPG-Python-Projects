@@ -16,7 +16,7 @@ import codecs
 import cx_Oracle
 import time
 
-con = cx_Oracle.connect('lpg/lpg123@192.168.188.22/devdb')
+con = cx_Oracle.connect('u/p@ip/sid')
 cur_oracle = con.cursor()
 zk = ZK('192.168.189.7', port=4370, timeout=5, password=0, force_udp=False, ommit_ping=False)
 conn = zk.connect()
@@ -49,7 +49,7 @@ while True:
     except Exception as e:
         try:
             conn = zk.connect()
-            con = cx_Oracle.connect('lpg/lpg123@192.168.188.22/devdb')
+            con = cx_Oracle.connect('u/p@ip/sid')
             cur_oracle = con.cursor()
             print('Exception' + str(conn))
             print('Exception ' + str(e))
