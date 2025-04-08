@@ -4,7 +4,7 @@ import geocoder
 import cx_Oracle
 import time
 
-con = cx_Oracle.connect('lpg/lpg7778@192.168.190.37/prodbs')
+con = cx_Oracle.connect('u/p@ip/sid')
 cur_oracle = con.cursor()
 
 while True:
@@ -50,7 +50,7 @@ while True:
 					print('Attendance location update failed')
 	except Exception as e:
 		try:
-			con = cx_Oracle.connect('lpg/lpg7778@192.168.190.37/prodbs')
+			con = cx_Oracle.connect('u/p@ip/sid')
 			cur_oracle = con.cursor()
 		except Exception as e:
 			pass
