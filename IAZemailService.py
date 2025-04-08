@@ -9,7 +9,7 @@ import cx_Oracle
 import smtplib
 
 while 1==1:
-	con = cx_Oracle.connect('lpg_test/lpg123456@192.168.188.28/devdb')
+	con = cx_Oracle.connect('u/p@ip/sid')
 
 	cur = con.cursor()
 	cur1 = con.cursor()
@@ -76,7 +76,7 @@ while 1==1:
 			con.commit()
 			print(email_outgoing_id + ' Email Sent successfully')
 		except Exception as e:
-			con = cx_Oracle.connect('lpg_test/lpg123456@192.168.188.28/devdb')
+			con = cx_Oracle.connect('u/p@ip/sid')
 			cur = con.cursor()
 			cur1 = con.cursor()
 			cur1.execute('UPDATE gbl_email_outgoing SET email_status = 0 , status_dttm = SYSDATE WHERE email_outgoing_id = ' + email_outgoing_id);
